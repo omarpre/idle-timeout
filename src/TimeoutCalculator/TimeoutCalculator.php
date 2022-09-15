@@ -17,7 +17,7 @@ class TimeoutCalculator
     {
         // We have to get session id from cookie.
         // If we try to grab it from session(), we end up touching the timestamp during page load
-        $cookieName = config('app.name').'_session';
+        $cookieName = \Str::slug(env('APP_NAME', 'laravel'), '_').'_session';
         $cookie = $request->cookie($cookieName);
         if (!$cookie) {
             throw new TimeoutCalculatorException('Not logged in');

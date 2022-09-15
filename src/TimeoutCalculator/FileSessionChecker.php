@@ -1,6 +1,6 @@
 <?php
 
-namespace Vectorwyse\IdleTimeoutAlert\TimeoutCalculator;
+namespace Omarpre\IdleTimeoutAlert\TimeoutCalculator;
 
 class FileSessionChecker extends SessionChecker
 {

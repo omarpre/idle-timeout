@@ -11,13 +11,13 @@ When the session is about to expire, show a dialog so the user can choose not to
 
 This code doesn't actually log the user out. It still relies on Laravel's mechanism for expiring sessions. All it does is periodically check how much time before the session will expire and alert the user when it is almost time.
 
-A demo library is at [vectorwyse/idle-timeout-alert-demo](https://github.com/vectorwyse/idle-timeout-alert-demo)
+A demo library is at [omarpre/idle-timeout-alert-demo](https://github.com/omarpre/idle-timeout-alert-demo)
 
 ## Installation
 
 Laravel package and NPM dependencies
 ```sh
-composer require vectorwyse/idle-timeout-alert
+composer require omarpre/idle-timeout-alert
 npm install --save idle-vue
 ```
 
@@ -39,12 +39,12 @@ Remove the "Remember Me" checkbox from your login form
 Step 1: 
 Publish assets to vendor folder:
 ```sh
-php artisan vendor:publish --provider="Vectorwyse\IdleTimeoutAlert\IdleTimeoutAlertServiceProvider" --tag="vue-components"
+php artisan vendor:publish --provider="omarpre\IdleTimeoutAlert\IdleTimeoutAlertServiceProvider" --tag="vue-components"
 ```
 
 Step 2: Add the following to your application's `resources/js/app.js`. Place within section where components are registered:
 ```js
-require('./../assets/vendor/vectorwyse/idle-timeout-alert/js/app');
+require('./../assets/vendor/omarpre/idle-timeout-alert/js/app');
 ```
 
 Step 3: Compile
@@ -74,9 +74,4 @@ As long as user is on the page, a ping will be sent in the background keeping th
 
 ## Customization
 
-Feel free to make changes to the dialog in `resources/assets/vendor/vectorwyse/idle-timeout-alert/js/components/TimeoutDialog.vue`. Don't forget to recompile assets afterward! 
-
-## Support Us
-[Vectorwyse](https://vectorwyse.com) is a digital agency offering advisory and web development services. We love building things with Laravel and Vue.js, so when we have an opportunity to give back to the community, we're super excited! 
-
-If you find this package useful, or if you would like us to build something for you, feel free to [drop us a line!](mailto:hello@vectorwyse.com)
+Feel free to make changes to the dialog in `resources/assets/vendor/omarpre/idle-timeout-alert/js/components/TimeoutDialog.vue`. Don't forget to recompile assets afterward! 

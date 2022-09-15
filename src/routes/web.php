@@ -1,7 +1,7 @@
 <?php
 
 use Illuminate\Http\Request;
-use Vectorwyse\IdleTimeoutAlert\TimeoutCalculator\TimeoutCalculator;
+use Omarpre\IdleTimeoutAlert\TimeoutCalculator\TimeoutCalculator;
 
 /*
 |--------------------------------------------------------------------------

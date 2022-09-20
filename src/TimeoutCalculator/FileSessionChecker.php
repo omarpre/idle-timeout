@@ -6,8 +6,14 @@ class FileSessionChecker extends SessionChecker
 {
     public function getLastModified()
     {
-        $sessionFile = storage_path("framework/sessions/$this->sessionId");
-        if (!file_exists($sessionFile)) {
+        $session_explode = explode('|',$this->sessionId);
+        foreach($session_explode as $v){
+            $sessionFile = storage_path("framework/sessions/$v");
+            if (file_exists($sessionFile)) {
+                break;
+            }
+        }
+	if (!file_exists($sessionFile)) {
             throw new TimeoutCalculatorException('Session not found');
         }
 
